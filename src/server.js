@@ -1,7 +1,7 @@
 'use strict';
 
 require('dotenv').config();
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT
 
 // 3rd Party Resources
 const express = require('express');
