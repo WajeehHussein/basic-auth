@@ -4,7 +4,7 @@
 // Create a Sequelize model
 const Users = (sequelize, DataTypes) =>
 
-    sequelize.define('User', {
+    sequelize.define('users', {
         username: {
             type: DataTypes.STRING,
             allowNull: false,
