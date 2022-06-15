@@ -3,9 +3,9 @@
 require('dotenv').config();
 const PORT = process.env.PORT
 
-// 3rd Party Resources
 const express = require('express');
-const { Sequelize, DataTypes } = require('sequelize');
+const app = express();
+
 
 
 // all routes
@@ -13,15 +13,9 @@ const userRoutes = require('./routes/user')
 
 
 
-// Prepare the express app
-const app = express();
 
-// Process JSON input and put the data on req.body
 app.use(express.json());
 app.use(userRoutes)
-
-
-// Process FORM intput and put the data on req.body
 app.use(express.urlencoded({ extended: true }));
 
 

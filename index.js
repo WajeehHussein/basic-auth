@@ -7,7 +7,7 @@ const { sequelize } = require('./src/models/index')
 
 
 sequelize.sync().then(() => {
-    server.start(PORT, () => console.log('server up'));
+    server.start();
 }).catch(e => {
     console.error('Could not start server', e.message);
 });
